@@ -40,10 +40,12 @@ if prompt:
         st.session_state["chat_answers_history"].append(formatted_response)
 
 if st.session_state["chat_answers_history"]:
-    for user_query, generated_response, in zip(
+    for (
+        user_query,
+        generated_response,
+    ) in zip(
         st.session_state["user_prompt_history"],
         st.session_state["chat_answers_history"],
     ):
         message(user_query, is_user=True)
         message(generated_response)
-
