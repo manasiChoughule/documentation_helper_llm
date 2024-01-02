@@ -45,5 +45,5 @@ if st.session_state["chat_answers_history"]:
         st.session_state["chat_answers_history"],
     ):
         message(user_query, is_user=True)
-        message(generated_response)git log
+        message(generated_response)
 
